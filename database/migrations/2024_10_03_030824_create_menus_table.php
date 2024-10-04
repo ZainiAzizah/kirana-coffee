@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('menus', function (Blueprint $table) {
             $table->id('id_menu');
+            $table->string('gambar_menu');
             $table->string('nama_menu');
             $table->text('detail_menu');
-            $table->string('gambar_menu');
             $table->bigInteger('harga');
             $table->integer('stok')->default(0);
             $table->unsignedBigInteger('id_kategori'); // Menyatakan bahwa kolom tersebut akan menyimpan angka besar (big integer) yang tidak bisa negatif (unsigned).
